@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle, #050510, #000);
+  color: #ffd700;
+  font-family: Georgia, serif;
+  overflow: hidden;
+  text-align: center;
+}
+
+#stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+#main {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+h1 {
+  font-size: 42px;
+  text-shadow: 0 0 20px gold;
+}
+
+.card {
+  width: 320px;
+  margin: 30px auto;
+  padding: 15px;
+  border-radius: 25px;
+  background: rgba(0,0,0,0.7);
+  border: 3px solid gold;
+  box-shadow: 0 0 40px gold;
+}
+
+#slide {
+  width: 100%;
+  border-radius: 20px;
+  transition: opacity 0.8s ease, transform 0.4s ease;
+}
+
+.fade {
+  opacity: 0;
+}
+
+#caption {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ffebaa;
+  min-height: 24px;
+}
+
+#finalScreen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #050510, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 2s;
+  z-index: 5;
+}
+
+#finalScreen.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#finalMessage {
+  font-size: 26px;
+  text-shadow: 0 0 25px gold;
+}
+
+#replayBtn {
+  margin-top: 40px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(45deg, pink, gold);
+  cursor: pointer;
+}
+.zoom {
+  transform: scale(1.05);
+}

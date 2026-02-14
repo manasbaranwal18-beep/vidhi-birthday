@@ -1,0 +1,132 @@
+/* Reset */
+
+body{
+  margin:0;
+  background:black;
+  overflow:hidden;
+  font-family:'Segoe UI',sans-serif;
+  color:white;
+}
+
+/* Stars Background */
+
+.stars{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 80% 40%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, white, transparent),
+    radial-gradient(1px 1px at 30% 80%, white, transparent),
+    radial-gradient(2px 2px at 50% 20%, white, transparent);
+  background-size:300px 300px;
+  animation:twinkle 4s infinite alternate;
+  z-index:-2;
+}
+
+@keyframes twinkle{
+  from{opacity:.4;}
+  to{opacity:1;}
+}
+
+/* Canvas */
+
+#bg{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+}
+
+/* Intro Box */
+
+#intro{
+  width:100vw;
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+
+/* Name */
+
+#name{
+  font-size:90px;
+  letter-spacing:18px;
+  color:gold;
+
+  text-shadow:
+    0 0 15px gold,
+    0 0 30px orange,
+    0 0 60px red;
+
+  opacity:0;
+  animation:fadeIn 2s forwards;
+  animation-delay:1s;
+}
+
+/* Subtitle */
+
+#subtitle{
+  margin-top:15px;
+  font-size:22px;
+  color:#ccc;
+  min-height:30px;
+}
+
+/* Heart Button */
+
+#heartBtn{
+  margin-top:40px;
+  font-size:70px;
+  cursor:pointer;
+
+  opacity:0;
+  animation:pulse 1.5s infinite;
+  animation-delay:4s;
+  animation-fill-mode:forwards;
+
+  filter:drop-shadow(0 0 20px hotpink);
+}
+
+/* Click Text */
+
+#clickText{
+  margin-top:10px;
+  font-size:18px;
+  color:pink;
+  opacity:0;
+  transition:1s;
+}
+
+/* Animations */
+
+@keyframes fadeIn{
+  to{opacity:1;}
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+  100%{transform:scale(1);}
+}
+
+/* Show Button */
+
+.show{
+  opacity:1 !important;
+}
+
+/* Fade Out */
+
+.fade{
+  opacity:0;
+  transition:2s;
+}
+
+/* Hide Audio */
+
+audio{display:none;}
