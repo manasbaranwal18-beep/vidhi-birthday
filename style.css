@@ -145,13 +145,24 @@ audio{display:none;}
     font-size: 16px !important;
   }
 
-  .slideshow {
-    width: 95% !important;
-  }
+ /* PHOTO FRAME FIX */
 
-  .slideshow img {
-    width: 100% !important;
-    height: auto !important;
+.slideshow {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.slideshow img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Mobile specific */
+@media (max-width: 768px) {
+  .slideshow {
+    width: 95%;
   }
 
   button {
@@ -159,3 +170,4 @@ audio{display:none;}
   }
 
 }
+
