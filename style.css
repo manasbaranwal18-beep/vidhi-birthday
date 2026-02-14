@@ -130,3 +130,32 @@ body{
 /* Hide Audio */
 
 audio{display:none;}
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  .slideshow {
+    width: 95% !important;
+  }
+
+  .slideshow img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  button {
+    width: 80%;
+  }
+
+}
